@@ -22,17 +22,15 @@ public class Ecker_DeleteChars {
         String outputText = "";
 
         for (int i = 0; i < inputText.length(); i++) {
-            int helpx = 0;
-            for (int x = helpx; x < inputTextChars.length; x++) {
-                if (inputText.charAt(i) == inputText.charAt(inputTextChars[x])) {
-
+            for (int x = 0; x < inputTextChars.length; x++) {
+                if (inputText.charAt(i) != inputText.charAt(inputTextChars[x])) {
+                    System.out.println("no");
                 } else {
-                    outputText += inputText.charAt(i);
+                    System.out.println("yes");
                     x = inputTextChars.length;
                 }
             }
         }
-
         return outputText;
     }
 
